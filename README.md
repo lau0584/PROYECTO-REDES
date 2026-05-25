@@ -1,84 +1,195 @@
-[INDEX.HTML.txt](https://github.com/user-attachments/files/28203346/INDEX.HTML.txt)
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Redes Informáticas</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Proyecto Redes Interactivo</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1{
+            text-align: center;
+            color: #003366;
+        }
+
+        .boton{
+            background: #003366;
+            color: white;
+            padding: 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .contenido{
+            display: none;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-    <header>
-        <h1>REDES INFORMÁTICAS</h1>
-    </header>
+    <h1>REDES INFORMÁTICAS</h1>
 
-    <section>
-        <h2>¿Qué es una red?</h2>
+    <!-- TOPOLOGIAS -->
 
+    <div class="boton" onclick="mostrar('topologias')">
+        Topologías de Red
+    </div>
+
+    <div class="contenido" id="topologias">
         <p>
-            Una red informática es un conjunto de dispositivos
-            conectados entre sí para compartir información y recursos.
+            Las topologías de red son la forma en que los dispositivos
+            están conectados.
         </p>
 
-        <img src="https://picsum.photos/500/250"
-             alt="Redes">
+        <ul>
+            <li>Estrella</li>
+            <li>Bus</li>
+            <li>Anillo</li>
+            <li>Malla</li>
+        </ul>
+    </div>
 
-    </section>
+    <!-- CABLEADO -->
 
-    <section>
-        <h2>Tipos de Redes</h2>
+    <div class="boton" onclick="mostrar('cableado')">
+        Cableado Estructurado
+    </div>
+
+    <div class="contenido" id="cableado">
+        <p>
+            Organiza los cables y conexiones de una red.
+        </p>
 
         <ul>
-            <li>LAN</li>
-            <li>MAN</li>
-            <li>WAN</li>
+            <li>UTP</li>
+            <li>STP</li>
+            <li>Fibra Óptica</li>
         </ul>
-    </section>
+    </div>
 
-    <section>
-        <h2>Dispositivos de Red</h2>
+    <!-- DIRECCIONES IP -->
 
-        <table border="1">
-            <tr>
-                <th>Dispositivo</th>
-                <th>Función</th>
-            </tr>
+    <div class="boton" onclick="mostrar('ip')">
+        Direcciones IP
+    </div>
 
-            <tr>
-                <td>Router</td>
-                <td>Conecta redes</td>
-            </tr>
+    <div class="contenido" id="ip">
+        <p>
+            Una dirección IP identifica un dispositivo en la red.
+        </p>
 
-            <tr>
-                <td>Switch</td>
-                <td>Conecta equipos</td>
-            </tr>
+        <p>
+            Ejemplo IPv4: 192.168.1.1
+        </p>
+    </div>
 
-            <tr>
-                <td>Access Point</td>
-                <td>Conexión WiFi</td>
-            </tr>
+    <!-- PROTOCOLOS -->
 
-        </table>
-    </section>
+    <div class="boton" onclick="mostrar('protocolos')">
+        Protocolos
+    </div>
 
-    <section>
-        <h2>Formulario</h2>
+    <div class="contenido" id="protocolos">
+        <p>
+            Los protocolos permiten la comunicación entre equipos.
+        </p>
 
-        <form>
-            <input type="text" placeholder="Nombre">
-            <br><br>
+        <ul>
+            <li>HTTP</li>
+            <li>HTTPS</li>
+            <li>FTP</li>
+            <li>TCP/IP</li>
+        </ul>
+    </div>
 
-            <input type="email" placeholder="Correo">
-            <br><br>
+    <!-- INTERNET -->
 
-            <button>Enviar</button>
-        </form>
-    </section>
+    <div class="boton" onclick="mostrar('internet')">
+        Internet
+    </div>
 
-    <footer>
-        <p>Proyecto HTML sobre Redes</p>
-    </footer>
+    <div class="contenido" id="internet">
+        <p>
+            Internet conecta millones de dispositivos en todo el mundo.
+        </p>
+
+        <img src="https://picsum.photos/600/250">
+    </div>
+
+    <!-- SEGURIDAD -->
+
+    <div class="boton" onclick="mostrar('seguridad')">
+        Seguridad Informática
+    </div>
+
+    <div class="contenido" id="seguridad">
+        <p>
+            Protege la información y los equipos de amenazas.
+        </p>
+
+        <ul>
+            <li>Antivirus</li>
+            <li>Firewall</li>
+            <li>Contraseñas Seguras</li>
+        </ul>
+    </div>
+
+    <!-- WIFI -->
+
+    <div class="boton" onclick="mostrar('wifi')">
+        Redes Inalámbricas
+    </div>
+
+    <div class="contenido" id="wifi">
+        <p>
+            Permiten conexión sin cables.
+        </p>
+
+        <ul>
+            <li>WiFi</li>
+            <li>Bluetooth</li>
+            <li>Hotspot</li>
+        </ul>
+    </div>
+
+    <script>
+
+        function mostrar(id){
+
+            let contenido = document.getElementById(id);
+
+            if(contenido.style.display == "block"){
+                contenido.style.display = "none";
+            }
+            else{
+                contenido.style.display = "block";
+            }
+
+        }
+
+    </script>
 
 </body>
 </html>
