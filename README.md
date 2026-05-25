@@ -1,0 +1,84 @@
+[INDEX.HTML.txt](https://github.com/user-attachments/files/28203346/INDEX.HTML.txt)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Redes Informáticas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>REDES INFORMÁTICAS</h1>
+    </header>
+
+    <section>
+        <h2>¿Qué es una red?</h2>
+
+        <p>
+            Una red informática es un conjunto de dispositivos
+            conectados entre sí para compartir información y recursos.
+        </p>
+
+        <img src="https://picsum.photos/500/250"
+             alt="Redes">
+
+    </section>
+
+    <section>
+        <h2>Tipos de Redes</h2>
+
+        <ul>
+            <li>LAN</li>
+            <li>MAN</li>
+            <li>WAN</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Dispositivos de Red</h2>
+
+        <table border="1">
+            <tr>
+                <th>Dispositivo</th>
+                <th>Función</th>
+            </tr>
+
+            <tr>
+                <td>Router</td>
+                <td>Conecta redes</td>
+            </tr>
+
+            <tr>
+                <td>Switch</td>
+                <td>Conecta equipos</td>
+            </tr>
+
+            <tr>
+                <td>Access Point</td>
+                <td>Conexión WiFi</td>
+            </tr>
+
+        </table>
+    </section>
+
+    <section>
+        <h2>Formulario</h2>
+
+        <form>
+            <input type="text" placeholder="Nombre">
+            <br><br>
+
+            <input type="email" placeholder="Correo">
+            <br><br>
+
+            <button>Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Proyecto HTML sobre Redes</p>
+    </footer>
+
+</body>
+</html>
